@@ -5,6 +5,7 @@ const [{ data: organization }, { data: repos }] = await Promise.all([
 ])
 // console.log(organization.value,repos.value)
 const counter = useState('counter', () =>Math.round(Math.random() * 1000) )
+const color =useColor()
 </script>
 
 <template>
@@ -16,5 +17,6 @@ const counter = useState('counter', () =>Math.round(Math.random() * 1000) )
       <button @click="counter++">+</button>
       <button @click="counter++">-</button>
     </div>
+    <div>Current color:{{color}}</div>
   </header>
 </template>
